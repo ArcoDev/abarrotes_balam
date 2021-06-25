@@ -1,2 +1,10 @@
-$rojo: #d33;
+//Tipografia
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+$roboto: 'Roboto', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');;
+$rock: 'RocknRoll One', sans-serif;
+
+//Colores
+$verde_dark: rgb(21, 88, 15);
 $blanco: #fff;
+$verde: rgb(15, 223, 15);

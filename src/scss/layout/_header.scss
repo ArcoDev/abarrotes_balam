@@ -1,12 +1,36 @@
 .header {
     width: 100%;
-    background: $rojo;
-    padding: 0 0 5rem 0;
-
+    height: 100vh;
+    background: $verde_dark;
     .navegacion {
         width: 100%;
         display: flex;
         justify-content: flex-end;
+        &.nav-fija{
+            position: fixed;
+            top: 0;
+            background: $verde_dark;
+            box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.377);
+        }
+        .items {
+            display: flex;
+            gap: 1.3rem;
+            padding: 0 3rem;
+
+            li a {
+                color: $blanco;
+                font-size: 1.5rem;
+                transition: .4s ease-in-out;
+                font-weight: 700;
+
+                &:hover {
+                    background: $blanco;
+                    color: $verde_dark;
+                    padding: .5rem;
+                    border-radius: 5px;
+                }
+            }
+        }
     }
 
     .logo {
@@ -14,6 +38,11 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin: 2rem 0;
+        img {
+            width: 60%;
+            height: 60%;
+        }
 
         p {
             color: $blanco;
@@ -26,11 +55,15 @@
         justify-content: space-evenly;
         gap: 2rem;
 
-        img {
+        .icon-abarrotes {
+            width: 197px;
+            height: 170px;
+            object-fit: cover;
+            object-position: 50% 50%;
             transition: 1s;
 
             &:hover {
-                animation: animaAbarrotes 1s;
+                animation: animaAbarrotes 1s!important;
             }
 
             @keyframes animaAbarrotes {
@@ -46,17 +79,6 @@
                     transform: translateY(15px);
                 }
             }
-        }
-    }
-    .btn-nosotros {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        padding-top: 5rem;
-        a {
-            padding: 1rem 5rem;
-            background: $blanco;
-            border-radius: 50px;
         }
     }
 }

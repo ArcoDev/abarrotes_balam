@@ -1,17 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap");
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+  background: #15580f;
 }
 
 a {
   text-decoration: none;
 }
 
+ul, li {
+  list-style: none;
+}
+
 .header {
   width: 100%;
-  background: #d33;
-  padding: 0 0 5rem 0;
+  height: 100vh;
+  background: #15580f;
 }
 
 .header .navegacion {
@@ -20,11 +29,44 @@ a {
   justify-content: flex-end;
 }
 
+.header .navegacion.nav-fija {
+  position: fixed;
+  top: 0;
+  background: #15580f;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.377);
+}
+
+.header .navegacion .items {
+  display: flex;
+  gap: 1.3rem;
+  padding: 0 3rem;
+}
+
+.header .navegacion .items li a {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: .4s ease-in-out;
+  font-weight: 700;
+}
+
+.header .navegacion .items li a:hover {
+  background: #fff;
+  color: #15580f;
+  padding: .5rem;
+  border-radius: 5px;
+}
+
 .header .logo {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 2rem 0;
+}
+
+.header .logo img {
+  width: 60%;
+  height: 60%;
 }
 
 .header .logo p {
@@ -38,12 +80,16 @@ a {
   gap: 2rem;
 }
 
-.header .img-abarrotes img {
+.header .img-abarrotes .icon-abarrotes {
+  width: 197px;
+  height: 170px;
+  object-fit: cover;
+  object-position: 50% 50%;
   transition: 1s;
 }
 
-.header .img-abarrotes img:hover {
-  animation: animaAbarrotes 1s;
+.header .img-abarrotes .icon-abarrotes:hover {
+  animation: animaAbarrotes 1s !important;
 }
 
 @keyframes animaAbarrotes {
@@ -58,29 +104,52 @@ a {
   }
 }
 
-.header .btn-nosotros {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding-top: 5rem;
-}
-
-.header .btn-nosotros a {
-  padding: 1rem 5rem;
-  background: #fff;
-  border-radius: 50px;
-}
-
 .grid-contenedor {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 500px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 450px;
 }
 
 .grid-contenedor .categoria {
-  border: 1px solid #d33;
+  background: #15580f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.grid-contenedor .categoria:nth-child(even) {
-  background: #bb1345;
+.grid-contenedor .categoria:nth-child(2n+1) {
+  background: #0fdf0f;
+}
+
+.grid-contenedor .categoria h2 {
+  color: #fff;
+  font-size: 2rem;
+  font-family: "RocknRoll One", sans-serif;
+}
+
+.grid-contenedor .categoria:nth-child(16) {
+  background: #15580f;
+  grid-column-start: span 3;
+}
+
+.nosotros {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 5rem 0;
+  color: #fff;
+}
+
+.nosotros h2 {
+  width: 50%;
+  font-size: 3rem;
+}
+
+.nosotros p {
+  width: 50%;
 }
