@@ -1,0 +1,62 @@
+.header {
+    width: 100%;
+    background: $rojo;
+    padding: 0 0 5rem 0;
+
+    .navegacion {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .logo {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        p {
+            color: $blanco;
+        }
+    }
+
+    .img-abarrotes {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        gap: 2rem;
+
+        img {
+            transition: 1s;
+
+            &:hover {
+                animation: animaAbarrotes 1s;
+            }
+
+            @keyframes animaAbarrotes {
+                0% {
+                    transform: translateY(0);
+                }
+
+                25% {
+                    transform: translateY(-15px);
+                }
+
+                50% {
+                    transform: translateY(15px);
+                }
+            }
+        }
+    }
+    .btn-nosotros {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-top: 5rem;
+        a {
+            padding: 1rem 5rem;
+            background: $blanco;
+            border-radius: 50px;
+        }
+    }
+}

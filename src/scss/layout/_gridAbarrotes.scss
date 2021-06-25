@@ -1,0 +1,11 @@
+.grid-contenedor{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 500px;
+    .categoria {
+        border: 1px solid $rojo;
+        &:nth-child(even) {
+            background: rgb(187, 19, 69);
+        }
+    }
+}

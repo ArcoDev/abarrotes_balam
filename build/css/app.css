@@ -3,3 +3,84 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  width: 100%;
+  background: #d33;
+  padding: 0 0 5rem 0;
+}
+
+.header .navegacion {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header .logo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header .logo p {
+  color: #fff;
+}
+
+.header .img-abarrotes {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+
+.header .img-abarrotes img {
+  transition: 1s;
+}
+
+.header .img-abarrotes img:hover {
+  animation: animaAbarrotes 1s;
+}
+
+@keyframes animaAbarrotes {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-15px);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+}
+
+.header .btn-nosotros {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 5rem;
+}
+
+.header .btn-nosotros a {
+  padding: 1rem 5rem;
+  background: #fff;
+  border-radius: 50px;
+}
+
+.grid-contenedor {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 500px;
+}
+
+.grid-contenedor .categoria {
+  border: 1px solid #d33;
+}
+
+.grid-contenedor .categoria:nth-child(even) {
+  background: #bb1345;
+}
